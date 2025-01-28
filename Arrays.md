@@ -1,4 +1,36 @@
 # Arrays
+An array is a collection of values of the same data type stored in contiguous memory locations.
+
+## Advantages
+- **Random Access**: Allows accessing any element in O(1) time.
+- **Cache Friendly**: When an element is accessed from memory to cache, pre-processors often fetch nearby elements. Arrays benefit from this as their elements are stored in contiguous memory.
+
+## Categories of Arrays Based on Size
+
+### 1. Fixed-Size Arrays (Static Arrays)
+- **Characteristics**:
+  - The size is fixed and cannot be changed once declared.
+  **Code Examples in C++**:
+    ```cpp
+    int arr[100];          // Fixed size
+    int arr[n];            // Size determined at runtime (if supported by the compiler)
+    int *arr = new int[100]; // Dynamically allocated
+    int arr[] = {1, 2, 3}; // Initialization with predefined values
+  -  Allocated memory generally in 2 ways
+       - Area in Heap Segement(Dynamically Allocated)
+           ```cpp
+            new int[n];
+       - Area in Stack Segment(Static)
+    All other ways of creating arrays as shown above
+ 
+### 2. Dynamic Size Array
+- **Characteristics**:
+  - Resizes themselves automatically.
+    - Ex: C++ vectors, Python Lists, Java ArrayList
+    - Initally when initialized some space is given say 50 cells and once if it reaches 50. It will allocate double the space and move the elements to newly allocated location. The amortized complexity is still O(1).
+
+
+   
 # Coding Problem: Two Sum
 
 <details>
